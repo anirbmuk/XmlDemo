@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XmlDemoAM"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true"
+  ComponentClass="blog.anirbanm.xml.model.am.XmlDemoAMImpl"
+  ComponentInterface="blog.anirbanm.xml.model.am.common.XmlDemoAM">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="departments"
+    ViewObjectName="blog.anirbanm.xml.model.vo.DepartmentsVO"/>
+  <ViewUsage
+    Name="employees"
+    ViewObjectName="blog.anirbanm.xml.model.vo.EmployeesVO"/>
+  <ViewLinkUsage
+    Name="DepartmentToEmployeesVL1"
+    ViewLinkObjectName="blog.anirbanm.xml.model.vo.vl.DepartmentToEmployeesVL"
+    SrcViewUsageName="blog.anirbanm.xml.model.am.XmlDemoAM.departments"
+    DstViewUsageName="blog.anirbanm.xml.model.am.XmlDemoAM.employees"
+    Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="printXml"
+      MethodName="printXml">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="type"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="blog.anirbanm.xml.model.am.XmlDemoAM">
+    <AppModuleConfig name="XmlDemoAMLocal" jbo.project="blog.anirbanm.xml.model.Model"
+                     ApplicationName="blog.anirbanm.xml.model.am.XmlDemoAM" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="jdbc/HrDS"/>
+      <Security AppModuleJndiName="blog.anirbanm.xml.model.am.XmlDemoAM"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="XmlDemoAMShared" jbo.project="blog.anirbanm.xml.model.Model"
+                     ApplicationName="blog.anirbanm.xml.model.am.XmlDemoAM" DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="jdbc/HrDS"/>
+      <Security AppModuleJndiName="blog.anirbanm.xml.model.am.XmlDemoAM"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="xmldemoPageDef"
+                Package="blog.anirbanm.xml.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="printXml" RequiresUpdateModel="true" Action="invokeMethod" MethodName="printXml"
+                  IsViewObjectMethod="false" DataControl="XmlDemoAMDataControl"
+                  InstanceName="bindings.printXml.dataControl.dataProvider">
+      <NamedData NDName="type" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>
